@@ -1,0 +1,24 @@
+---
+title: "Week 3 Assignment"
+author: "Alán García Bernal"
+date: "17/6/2019"
+output: ioslides_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Murders by Urban Population in the US
+
+```{r Murders, echo = FALSE, message=FALSE, warning=FALSE}
+# Download data frame
+library(plotly)
+data(USArrests)
+
+plot_ly(USArrests, x = USArrests$UrbanPop, y = USArrests$Murder, mode = "markers",
+        size = 3, text = rownames(USArrests))
+
+```
+
+
